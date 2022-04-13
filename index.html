@@ -10,40 +10,99 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="header-left">
-                <p><span>0</span></p>
+                <p><span class="miles">0</span></p>
                 <p><span>miles from</span></p>
                 <p><span>earth</span></p>
-            </div>
-            <div class="header-right">
-                <p class="home-btn">home</p>
-                <img src="./images/spaceship.png" alt="spaceship logo" class="logo">
-            </div>
         </div>
-        <div class="hero">
-            <h1 class="hero-title">planet bnb</h1>
-            <div class="hero-sub-container">
-                <h2 class="hero-subtitle">enjoy your stay on one of our planets </h2>
+        <div class="under-header">
+            <div class="hero-slides">
+                <img src="./images/hero/final/1.png" class="slide">
+                <img src="./images/hero/final/2.png" class="slide">
+                <img src="./images/hero/final/3.png" class="slide">
+                <img src="./images/hero/final/4.png" class="slide">
+                <img src="./images/hero/final/5.png" class="slide">
             </div>
-            <div class="hero-icons">
-                <div class="icon">
-                    <img src="./images/icons/earth.png" alt="earth icon" class="icon-img">
+            <div class="hero">
+                <div class="home">
+                    <a href="./index.html"></a>
+                        <p class="home-btn">earth</p>
+                        <img src="./images/spaceship.png" alt="spaceship logo" class="logo">
+                    </a>
                 </div>
-                <div class="icon">
-                    <img src="./images/icons/mars.png" alt="mars icon" class="icon-img">
-                    <p class="icon-text">mars</p>
+                <h1 class="hero-title">planet bnb</h1>
+                <div class="hero-sub-container">
+                    <h2 class="hero-subtitle">enjoy your stay on one of our planets </h2>
                 </div>
-                <div class="icon">
-                    <img src="./images/icons/Jupiter.png" alt="jupiter icon" class="icon-img">
-                    <p class="icon-text">jupiter</p>
-                </div>
-                <div class="icon">
-                    <img src="./images/icons/saturn.png" alt="saturn icon" class="icon-img">
-                    <p class="icon-text">saturn</p>
+                <div class="hero-icons">
+                    <div class="icon">
+                        <img src="./images/icons/earth.png" alt="earth icon" class="icon-img">
+                    </div>
+                    <div class="icon" id="mars-icon-btn">
+                        <img src="./images/icons/mars.png" alt="mars icon" class="icon-img">
+                        <p class="icon-text">mars</p>
+                    </div>
+                    <div class="icon" id="jupiter-icon-btn">
+                        <img src="./images/icons/Jupiter.png" alt="jupiter icon" class="icon-img">
+                        <p class="icon-text">jupiter</p>
+                    </div>
+                    <div class="icon" id="saturn-icon-btn">
+                        <img src="./images/icons/saturn.png" alt="saturn icon" class="icon-img">
+                        <p class="icon-text">saturn</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
+    <div class="bottom-container">
+        <section class="mars">
+            <div class="content-left">
+                <div class="cirlce"></div>
+                <img src="./images/mars/mars-home.jpeg" alt="mars" class="planet">
+                <div class="square"></div>
+            </div>
+            <div class="content-right">
+                <h1 class="planet-title">mars</h1>
+                <p class="planet-context">our most visited planet. just a short trip from earth. enjoy the vast red sandy beaches and all inclusive resorts.
+                </p>
+                <a href="./pages/mars.html"><button>book</button></a>
+            </div>
+        </section>
+
+        <section class="jupiter">
+            <div class="content-left">
+                <div class="square"></div>
+                <img src="./images/jupiter/jup-front.webp" alt="jupiter" class="planet" id="planet-jup">
+                <div class="cirlce"></div>
+            </div>
+            <div class="content-right" id="jup-info">
+                <h1 class="planet-title">Jupiter</h1>
+                <p class="planet-context">the largest planet with much to do. this airy planet stay includes heated spas, shopping venues, and a great nightlife.
+                </p>
+                <button>book</button>
+            </div>
+        </section>
+
+        <section class="saturn">
+            <div class="content-left">
+                <div class="cirlce"></div>
+                <img src="./images/saturn/saturn-1.jpeg" alt="saturn" class="planet">
+                <div class="square"></div>
+            </div>
+            <div class="content-right">
+                <h1 class="planet-title">Saturn</h1>
+                <p class="planet-context">for refreshing winds and adventure visit saturn’s moons. hike the bright glowing rings and spend your night catching stars.
+                </p>
+                <button>book</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <img src="./images/spaceship.png" alt="spaceship" class="logo footer-btn">
+        <p class="footer-btn">back to earth</p>
+    </div>
+
+    <script src="scroll.js"></script>
 </body>
 </html>
