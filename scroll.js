@@ -4,12 +4,18 @@ const backHome = document.querySelectorAll('.footer-btn');
 const marsBtn = document.querySelector('#mars-icon-btn');
 const jupiterBtn = document.querySelector('#jupiter-icon-btn');
 const saturnBtn = document.querySelector('#saturn-icon-btn');
+const sections = document.querySelectorAll('section');
 
 //when we scroll the page update the scrolltag to be how far we scrolled
 document.addEventListener('scroll', function () {
     const miles = window.pageYOffset;
 
-    milesTag.innerHTML = miles + " m"
+    if (miles == 0) {
+        milesTag.innerHTML = 0;
+    } else {
+        milesTag.innerHTML = miles + " m";
+    }
+
 })
 
 // When the user clicks on the button, scroll to the top of the document
@@ -22,11 +28,11 @@ backHome.forEach(button => {
 
 //when the user clicks on the icon, scroll to that section
 marsBtn.addEventListener('click', function () {
-    window.scrollTo({ top: 515, behavior: 'smooth' });
+    window.scrollTo({ top: 590, behavior: 'smooth' });
 });
 
 jupiterBtn.addEventListener('click', function () {
-    window.scrollTo({ top: 1133, behavior: 'smooth' });
+    window.scrollTo({ top: 1200, behavior: 'smooth' });
 });
 
 saturnBtn.addEventListener('click', function () {
@@ -77,5 +83,28 @@ slideArea.addEventListener('mouseenter', function () {
 slideArea.addEventListener('mouseleave', function () {
     images.forEach(image => {
         image.style.transform = "";
+    })
+});
+
+//when we scroll page make things paralax
+//we want to move certain tags, based on how far they are from an anchor point
+//what is the anchor? middle of section
+//how far should we parralax? ratio of middle distance scrolled to middle point
+document.addEventListener('scroll', () => {
+    const topViewport = window.pageYOffset;
+    const midViewport = topViewport + (window.innerHeight);
+
+    sections.forEach(section => {
+        const topSection = section.offsetTop;
+        const midSection = topSection + (section.offsetHeight);
+        
+        const distanceToSection = midViewport - midSection;
+        const parallaxTags = section.querySelectorAll(`[data-parallax]`);
+
+        //loop over each parallax tag
+        parallaxTags.forEach(tag => {
+            const speed = parseFloat(tag.getAttribute("data-parallax"));
+            tag.style.transform = `translate(0px, ${distanceToSection * speed}px)`
+        })
     })
 })

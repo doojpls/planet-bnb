@@ -5,28 +5,44 @@
     100% {opacity: 1;}
 }
 
-body {
-    margin: 0px;
+* {
+    margin: 0;
+    padding: 0;
     font-family: 'Kanit', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    display: table;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: white;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
     background-color: #11171F;
-    padding-left: 250px;
-    padding-right: 250px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 250px 30px 250px;
+    gap: 100px;
+    align-items: flex-end;
 }
 
 .header-right {
     display: flex;
     gap: 15px;
     margin-bottom: 50px;
-    margin-top: 10px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.title{
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .logo {
@@ -47,10 +63,6 @@ header {
     padding-right: 3px;
 }
 
-section {
-    text-align: center;
-}
-
 .pics {
     width: 35rem;
 }
@@ -65,9 +77,8 @@ div.slides img {
     margin-right: auto;
     left: 0;
     right: 0;
-    transition: transform 0.5s, box-shadow 0.5s ;
+   transition: transform 0.5s, box-shadow 0.5s ;
     cursor: pointer;
-
 }
 
 div.slides img:first-child {
@@ -78,14 +89,19 @@ div.slides:hover img {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
+.scroll {
+    text-align: center;
+    margin-top: 430px;
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 550px;
-    margin-bottom: 200px;
-    gap: 1rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    gap: 1.5rem;
 }
 
 .calender p, .calender h1 {
@@ -103,15 +119,16 @@ div.slides:hover img {
 .month {
     width: 26rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    gap: 5rem;
 }
 
 .arrow {
     font-size: 1rem;
     cursor: pointer;
+    font-weight: bold;
+    width: 5rem;
 }
 
 .weekdays {
@@ -119,6 +136,7 @@ div.slides:hover img {
     height: 3rem;
     display: flex;
     align-items: center;
+    font-weight: bolder;
 }
 
 .weekdays div {
@@ -137,8 +155,8 @@ div.slides:hover img {
 
 .days div {
     font-size: 1rem;
-    margin: 0.2rem;
     width: calc(22.9rem/7);
+    padding: .2rem;
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -159,9 +177,10 @@ button {
     color: white;
     border: none;
     font-size: 18px;
-    padding: 20px 30px 20px 30px;
+    padding: 18px 28px 18px 28px;
     cursor: pointer;
     margin-top: 1rem;
+    border-radius: 3px;
 }
 
 .footer {
@@ -173,9 +192,28 @@ button {
     font-weight: lighter;
     gap: 15px;
     background-color: #11171F;
-    width: 100%;
 }
 
 .footer-btn {
     cursor: pointer;
+}
+
+.select {
+    color: white;
+    background-color: #4D775B;
+    width: 10rem;
+}
+
+.alert-img {
+    margin-top: 10px;
+    width: 2rem;
+    display: none;
+}
+
+.alert-text {
+    margin: 0;
+    padding: 0;
+    color: #C54C59;
+    font-size: 1.2rem;
+    display: none;
 }

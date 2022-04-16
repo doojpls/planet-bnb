@@ -1,6 +1,8 @@
 //pick all images and layer them based on z index
-const slideArea = document.querySelector('div.slides')
-const images = slideArea.querySelectorAll('.pics')
+const slideArea = document.querySelector('div.slides');
+const images = slideArea.querySelectorAll('.pics');
+const slide = document.querySelector('.scroll');
+const sections = document.querySelectorAll('section');
 
 //keep track of two things
 let currentSlide = 0;
@@ -28,17 +30,37 @@ slideArea.addEventListener('click', function () {
 
 //when i hover over images they move in random place
 slideArea.addEventListener('mouseenter', function () {
+    slide.style.color = 'white';
     images.forEach(image => {
         const x = 25 * (Math.floor(Math.random() * 5)) - 50;
         const y = 25 * (Math.floor(Math.random() * 5)) - 50;
 
         image.style.transform = `translate(${x}px, ${y}px)`;
+        //image.style.webkitTransition = '0.5s';
+        
     })
 })
 
 //when i move my mouse away put images back
 slideArea.addEventListener('mouseleave', function () {
+    slide.style.color = 'black';
     images.forEach(image => {
         image.style.transform = "";
+    })
+})
+
+//when i scroll slides move out and in
+document.addEventListener('scroll', () => {
+    const topViewport = window.pageYOffset;
+
+    images.forEach(image => {
+        const xyTag = image.querySelector(`[data-xy]`);
+        const xy = image.getAttribute("data-xy");
+
+            if ((topViewport > 40) && (topViewport < 400)) {
+                image.style.transform = `translate(${xy})`;
+            } else {
+                image.style.transform = "";
+            } 
     })
 })

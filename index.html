@@ -10,33 +10,35 @@
 <body>
     <div class="container">
         <div class="header">
+            <div class="header-left">
                 <p><span class="miles">0</span></p>
                 <p><span>miles from</span></p>
                 <p><span>earth</span></p>
+            </div>
+            <div class="header-right">
+                <a href="./index.html"></a>
+                    <p class="home-btn">home</p>
+                    <img src="./images/home.png" alt="spaceship logo" class="logo">
+                </a>
+            </div>
         </div>
-        <div class="under-header">
+        <div class="hero">
             <div class="hero-slides">
-                <img src="./images/hero/final/1.png" class="slide">
+                <img src="./images/hero/final/1.png" class="slide" data-xy="50px, 10px">
                 <img src="./images/hero/final/2.png" class="slide">
                 <img src="./images/hero/final/3.png" class="slide">
                 <img src="./images/hero/final/4.png" class="slide">
-                <img src="./images/hero/final/5.png" class="slide">
+                <img src="./images/hero/final/5.png" class="slide" data-xy="-50px, -25px">
             </div>
-            <div class="hero">
-                <div class="home">
-                    <a href="./index.html"></a>
-                        <p class="home-btn">earth</p>
-                        <img src="./images/spaceship.png" alt="spaceship logo" class="logo">
-                    </a>
-                </div>
+            <div class="hero-text">
                 <h1 class="hero-title">planet bnb</h1>
                 <div class="hero-sub-container">
                     <h2 class="hero-subtitle">enjoy your stay on one of our planets </h2>
                 </div>
                 <div class="hero-icons">
-                    <div class="icon">
+                    <!--<div class="icon">
                         <img src="./images/icons/earth.png" alt="earth icon" class="icon-img">
-                    </div>
+                    </div>-->
                     <div class="icon" id="mars-icon-btn">
                         <img src="./images/icons/mars.png" alt="mars icon" class="icon-img">
                         <p class="icon-text">mars</p>
@@ -57,9 +59,9 @@
     <div class="bottom-container">
         <section class="mars">
             <div class="content-left">
-                <div class="cirlce"></div>
-                <img src="./images/mars/mars-home.jpeg" alt="mars" class="planet">
-                <div class="square"></div>
+                <div class="cirlce" data-parallax="-0.1"></div>
+                <img src="./images/mars/mars-home-12.png" alt="mars" class="planet">
+                <div class="square" data-parallax="0.1"></div>
             </div>
             <div class="content-right">
                 <h1 class="planet-title">mars</h1>
@@ -71,9 +73,9 @@
 
         <section class="jupiter">
             <div class="content-left">
-                <div class="square"></div>
+                <div class="square" data-parallax="0.20"></div>
                 <img src="./images/jupiter/jup-front.webp" alt="jupiter" class="planet" id="planet-jup">
-                <div class="cirlce"></div>
+                <div class="cirlce" data-parallax="-0.20"></div>
             </div>
             <div class="content-right" id="jup-info">
                 <h1 class="planet-title">Jupiter</h1>
@@ -85,9 +87,9 @@
 
         <section class="saturn">
             <div class="content-left">
-                <div class="cirlce"></div>
+                <div class="cirlce" data-parallax="-0.3"></div>
                 <img src="./images/saturn/saturn-1.jpeg" alt="saturn" class="planet">
-                <div class="square"></div>
+                <div class="square" data-parallax="0.3"></div>
             </div>
             <div class="content-right">
                 <h1 class="planet-title">Saturn</h1>
@@ -102,6 +104,8 @@
         <img src="./images/spaceship.png" alt="spaceship" class="logo footer-btn">
         <p class="footer-btn">back to earth</p>
     </div>
+
+    <h2 class=".hello"></h2>
 
     <script src="scroll.js"></script>
 </body>

@@ -1,22 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Roboto&family=Titillium+Web:wght@300;400;700&display=swap');
 
-body {
+* {
     margin: 0px;
+    padding: 0px;
     font-family: 'Kanit', sans-serif;
-    background-color: #11171F;
+}
+
+html, body {
+    width: 100%;
+    display: table;
 }
 
 .container {
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-top: 0;
-    padding-bottom: 50px;
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding: 30px 150px 100px 150px;
+    background-color: #11171F;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .header {
+    padding: 20px 50px 150px 50px;
+    z-index: 1;
+}
+
+.header-right {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    float: right;
+    padding-top: 20px;
+}
+
+.header-left {
     color: white;
     position: fixed;
     z-index: 1;
@@ -35,22 +51,25 @@ body {
     padding-right: 3px;
 }
 
-.under-header {
+.hero {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 290px;
+    z-index: 2;
 }
 
 div.hero-slides {
     position: relative;
-    margin-left: 150px;
-    margin-bottom: 230px;
+    padding-bottom: 340px;
+    padding-left: 50px;
 }
 
 div.hero-slides img {
     position: absolute;
     transition: transform 0.5s, box-shadow 0.5s ;
     cursor: pointer;
+    border: 0.5px solid rgba(243, 241, 242, .4);
 }
 
 div.hero-slides img:first-child {
@@ -58,22 +77,16 @@ div.hero-slides img:first-child {
 }
 
 .slide {
-    width: 250px;
+    max-width: 250px;
 }
 
-.hero {
+.hero-text {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     color: white;
-    margin-right: 50px;
-}
-
-.home {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 50px;
-    margin-top: 10px;
+    padding-right: 50px;
+    gap: 20px;
 }
 
 .logo {
@@ -110,6 +123,7 @@ div.hero-slides img:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 #mars-icon-btn, #jupiter-icon-btn, #saturn-icon-btn {
@@ -131,7 +145,6 @@ div.hero-slides img:first-child {
 
 section {
     padding: 20px 200px 20px 200px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,7 +179,10 @@ section {
 
 .planet {
     position: relative;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
 }
 
 #planet-jup {
@@ -193,8 +209,9 @@ section {
 .content-right {
     display: flex;
     flex-direction: column;
-    margin: 55px;
+    padding: 55px;
     gap: 30px;
+    max-width: 170px;
 }
 
 .planet-title {
@@ -222,11 +239,13 @@ button {
 }
 
 .jupiter {
-    margin-left: 100px;
+    align-items: center;
+    margin-left: 90px;
 }
 
 #jup-info {
-    margin-left: 155px;
+    padding-left: 155px;
+    max-width: 170px;
 }
 
 .footer {
@@ -237,6 +256,8 @@ button {
     color: white;
     font-weight: lighter;
     gap: 15px;
+    background-color: #11171F;
+    margin: 0px;
 }
 
 .footer-btn {
