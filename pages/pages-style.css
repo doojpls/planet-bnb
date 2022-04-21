@@ -14,6 +14,7 @@
 html, body {
     width: 100%;
     display: table;
+    background-color: #F3F1F2;
 }
 
 header {
@@ -201,6 +202,12 @@ button {
 .select {
     color: white;
     background-color: #4D775B;
+    width: 10rem;
+}
+
+.select-reverse {
+    color: black;
+    background-color: white;
     width: 10rem;
 }
 

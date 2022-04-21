@@ -85,7 +85,6 @@ const alertText = document.querySelector('.alert-text');
         alertText.style.display = 'block';
     })
     
-
 }
 
 renderCalendar();

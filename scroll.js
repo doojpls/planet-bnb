@@ -72,10 +72,12 @@ slideArea.addEventListener('click', function () {
 //when i hover over images they move in random place
 slideArea.addEventListener('mouseenter', function () {
     images.forEach(image => {
-        const x = 25 * (Math.floor(Math.random() * 5)) - 50;
-        const y = 25 * (Math.floor(Math.random() * 5)) - 50;
+        if (image.style.transform == "") {
+            const x = 25 * (Math.floor(Math.random() * 5)) - 50;
+            const y = 25 * (Math.floor(Math.random() * 5)) - 50;
 
-        image.style.transform = `translate(${x}px, ${y}px)`;
+            image.style.transform = `translate(${x}px, ${y}px)`;
+        }
     })
 })
 
@@ -108,3 +110,24 @@ document.addEventListener('scroll', () => {
         })
     })
 })
+
+//when i scroll slides move out and in
+document.addEventListener('scroll', () => {
+    const topViewport = window.pageYOffset;
+
+    images.forEach(image => {
+        const xyTag = image.querySelector(`[data-xy]`);
+        const xy = image.getAttribute("data-xy");
+
+            if ((topViewport > 40) && (topViewport < 300)) {
+                image.style.transform = `translate(${xy})`;
+            } else {
+                image.style.transform = "";
+            } 
+    })
+})
+
+//const pics = document.querySelector('.slide')
+
+//var rect = pics.getBoundingClientRect();
+//console.log(rect.top, rect.right, rect.bottom, rect.left);

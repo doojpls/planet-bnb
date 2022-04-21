@@ -30,13 +30,16 @@ slideArea.addEventListener('click', function () {
 
 //when i hover over images they move in random place
 slideArea.addEventListener('mouseenter', function () {
+    const topViewport = window.pageYOffset;
     slide.style.color = 'white';
     images.forEach(image => {
-        const x = 25 * (Math.floor(Math.random() * 5)) - 50;
-        const y = 25 * (Math.floor(Math.random() * 5)) - 50;
-
-        image.style.transform = `translate(${x}px, ${y}px)`;
-        //image.style.webkitTransition = '0.5s';
+        if (image.style.transform == "") {
+            const x = 25 * (Math.floor(Math.random() * 5)) - 50;
+            const y = 25 * (Math.floor(Math.random() * 5)) - 50;
+    
+            image.style.transform = `translate(${x}px, ${y}px)`;
+            //image.style.webkitTransition = '0.5s';
+        }
         
     })
 })
