@@ -6,6 +6,19 @@ const jupiterBtn = document.querySelector('#jupiter-icon-btn');
 const saturnBtn = document.querySelector('#saturn-icon-btn');
 const sections = document.querySelectorAll('section');
 
+
+//top container changes color when clicking home button
+const homeBtn = document.querySelector('.header-right');
+const container = document.querySelector('.container');
+const bottomText = document.querySelector('.bottom-container');
+const bottom = document.querySelector('.bottom-container');
+
+homeBtn.addEventListener('click', () => {
+    container.classList.toggle('container-toggle');
+    bottom.classList.toggle('container-toggle');
+    bottomText.classList.toggle('bottom-text-toggle')
+});
+
 //when we scroll the page update the scrolltag to be how far we scrolled
 document.addEventListener('scroll', function () {
     const miles = window.pageYOffset;

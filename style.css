@@ -30,6 +30,7 @@ html, body {
     gap: 15px;
     float: right;
     padding-top: 20px;
+    cursor: pointer;
 }
 
 .header-left {
@@ -269,4 +270,12 @@ button {
 
 .footer-btn {
     cursor: pointer;
+}
+
+.container-toggle {
+    background-image: url('./images/space.jpeg');
+}
+
+.bottom-text-toggle {
+    color: white
 }
