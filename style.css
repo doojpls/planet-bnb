@@ -13,9 +13,10 @@ html, body {
 
 .container {
     padding: 30px 150px 100px 150px;
-    background-color: #11171F;
+    /* background-color: #11171F; */
     margin: 0;
     box-sizing: border-box;
+    background-image: url('./images/space.jpeg');
 }
 
 .header {
@@ -146,9 +147,11 @@ div.hero-slides img:first-child {
 }
 
 .bottom-container {
-    background-color: #F3F1F2;
+    /* background-color: #F3F1F2; */
+    background-image: url('./images/space.jpeg');
     padding-top: 20px;
     padding-bottom: 200px;
+    color: white;
 }
 
 section {
